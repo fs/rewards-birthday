@@ -1,0 +1,135 @@
+GIT
+  remote: https://github.com/fs/rewards-ruby.git
+  revision: ec5333d10aa05190af814660f04b75a032b5ef39
+  specs:
+    rewards-ruby (0.0.1)
+      active_model_serializers
+      httparty
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionpack (6.0.0)
+      actionview (= 6.0.0)
+      activesupport (= 6.0.0)
+      rack (~> 2.0)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.2.0)
+    actionview (6.0.0)
+      activesupport (= 6.0.0)
+      builder (~> 3.1)
+      erubi (~> 1.4)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
+    activemodel (6.0.0)
+      activesupport (= 6.0.0)
+    activesupport (6.0.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.1, >= 2.1.8)
+    ast (2.4.0)
+    builder (3.2.3)
+    bundler-audit (0.6.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 0.18)
+    byebug (11.0.1)
+    case_transform (0.2)
+      activesupport
+    concurrent-ruby (1.1.5)
+    crass (1.0.4)
+    diff-lcs (1.3)
+    dotenv (2.7.5)
+    erubi (1.8.0)
+    httparty (0.17.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.3)
+    jsonapi-renderer (0.2.2)
+    loofah (2.2.3)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.5.9)
+    mime-types (3.3)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2019.0904)
+    mini_portile2 (2.4.0)
+    minitest (5.11.3)
+    multi_xml (0.6.0)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
+    parallel (1.17.0)
+    parser (2.6.4.1)
+      ast (~> 2.4.0)
+    rack (2.0.7)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.2.0)
+      loofah (~> 2.2, >= 2.2.2)
+    rainbow (3.0.0)
+    rake (12.3.3)
+    rollbar (2.22.1)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.2)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.2)
+    rubocop (0.74.0)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.6)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-rspec (1.35.0)
+      rubocop (>= 0.60.0)
+    ruby-progressbar (1.10.1)
+    snitcher (0.4.1)
+    thor (0.20.3)
+    thread_safe (0.3.6)
+    timecop (0.9.1)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    unicode-display_width (1.6.0)
+    zeitwerk (2.1.10)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler-audit
+  byebug
+  dotenv
+  rake
+  rewards-ruby!
+  rollbar
+  rspec
+  rubocop
+  rubocop-rspec
+  snitcher
+  timecop
+
+RUBY VERSION
+   ruby 2.6.3p62
+
+BUNDLED WITH
+   2.0.2

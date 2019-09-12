@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby -Ilib
+
+require "bundler/setup"
+require "dotenv/load"
+require "rewards-birthday"
+
+require "irb"
+IRB.start
