@@ -1,3 +1,8 @@
+require "rewards-birthday/rollbar"
+require "rewards-birthday/user_fetcher"
+require "rewards-birthday/bonus"
+require "rewards-birthday/templates"
+require "rewards-birthday/templates/birthday"
 require "rewards"
 
 module RewardsBirthday
@@ -14,18 +19,22 @@ module RewardsBirthday
 
     def create_birthday_bonus
       users = load_users(token)
-      birthdays = users
-
+      birthdays = fetch_people("birthdays", users)
       return unless birthdays
 
       Bonus.new(
         token: token,
-        template: RewardsBamboohr::Templates::Birthday,
-        users: users
+        template: RewardsBamboohr::Templates::Birthday
       ).create_bonuses(birthdays)
     end
 
     private
+  
+    def fetch_people(event, users)
+      return UserFetcher.new(users).by_emails(emails) if emails.present?
+
+      UserFetcher.new(users).public_send("today_#{event}")
+    end
 
     def load_users(token)
       Rewards::Client.new(token: token)
