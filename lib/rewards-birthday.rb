@@ -29,7 +29,7 @@ module RewardsBirthday
     end
 
     private
-  
+
     def fetch_people(event, users)
       return UserFetcher.new(users).by_emails(emails) if emails.present?
 

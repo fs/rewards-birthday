@@ -1,14 +1,14 @@
 module RewardsBirthday
   module Templates
     class Base
-      attr_reader :username, :user_data
+      attr_reader :username
 
-      def self.generate(username:, user_data:)
-        new(username, user_data).generate
+      def self.generate(username:)
+        new(username).generate
       end
 
-      def initialize(username, user_data)
-        @username, @user_data = username, user_data
+      def initialize(username)
+        @username = username
       end
     end
   end
