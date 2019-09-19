@@ -1,4 +1,4 @@
-module RewardsBamboohr
+module RewardsBirthday
   module Templates
     class Birthday < Base
       DEFAULT_TEMPLATE = "+100 Happy Birthday @%<username>s".freeze
