@@ -6,7 +6,7 @@ describe RewardsBirthday::UserFetcher do
     it "returns a birthday person" do
       Timecop.freeze("1991-01-01") do
         expect(fetcher.today_birthdays.first).to include("id" => "2")
-        expect(fetcher.today_birthdays.size).to eql(1)
+        expect(fetcher.today_birthdays.size).to be(1)
       end
     end
   end
@@ -16,7 +16,7 @@ describe RewardsBirthday::UserFetcher do
 
     it "returns person with certain email" do
       expect(fetcher.by_emails(emails).first).to include("id" => "2")
-      expect(fetcher.by_emails(emails).size).to eql(1)
+      expect(fetcher.by_emails(emails).size).to be(1)
     end
   end
 end
