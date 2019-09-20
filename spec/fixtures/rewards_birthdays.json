@@ -1,0 +1,12 @@
+[{
+    "id":"2",
+    "type":"users",
+    "attributes":
+      {
+        "email":"john.smith@example.com",
+        "full-name":"John Smith",
+        "username":"john.smith",
+        "birth_date": "1991-01-01"
+      }
+  }
+]

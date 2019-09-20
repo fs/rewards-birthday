@@ -10,13 +10,13 @@ module RewardsBirthday
 
     def today_birthdays
       @employees.each_with_object([]) do |employee, birthday_people|
-        birthday_people << employee if today?(employee["birth_date"])
+        birthday_people << employee if today?(employee["attributes"]["birth_date"])
       end
     end
 
     def by_emails(emails)
       @employees.each_with_object([]) do |employee, people|
-        people << employee if emails.include?(employee["email"])
+        people << employee if emails.include?(employee["attributes"]["email"])
       end
     end
 

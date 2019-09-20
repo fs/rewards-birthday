@@ -24,7 +24,7 @@ module RewardsBirthday
 
       Bonus.new(
         token: token,
-        template: RewardsBamboohr::Templates::Birthday
+        template: RewardsBirthday::Templates::Birthday
       ).create_bonuses(birthdays)
     end
 
