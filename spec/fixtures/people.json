@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "users",
+            "attributes": {
+                "email": "jane.smith@example.com",
+                "full-name": "Jane Smith",
+                "username": "jane",
+                "birth-date": "1970-01-01"
+            }
+        },
+        {
+            "id": "2",
+            "type": "users",
+            "attributes": {
+                "email": "john.smith@example.com",
+                "full-name": "John Smith",
+                "username": "john",
+                "birth-date": "1970-01-02"
+            }
+        },
+        {
+            "id": "3",
+            "type": "users",
+            "attributes": {
+                "email": "lucas.brown@example.com",
+                "full-name": "Lucas brown",
+                "username": "lucas",
+                "birth-date": "1970-01-01"
+            }
+        },
+        {
+            "id": "4",
+            "type": "users",
+            "attributes": {
+                "email": "chris.white@example.com",
+                "full-name": "Chris White",
+                "username": "chris",
+                "birth-date": "1970-01-02"
+            }
+        },
+        {
+            "id": "5",
+            "type": "users",
+            "attributes": {
+                "email": "emily.red@example.com",
+                "full-name": "Emily Red",
+                "username": "emily",
+                "birth-date": "1970-01-02"
+            }
+        },
+        {
+            "id": "6",
+            "type": "users",
+            "attributes": {
+                "email": "peter.key@example.com",
+                "full-name": "Peter Key",
+                "username": "peter",
+                "birth-date": "1970-01-03"
+            }
+        },
+        {
+            "id": "7",
+            "type": "users",
+            "attributes": {
+                "email": "julia.summers@example.com",
+                "full-name": "Julia Summers",
+                "username": "julia",
+                "birth-date": "1970-01-04"
+            }
+        }
+    ]
+}

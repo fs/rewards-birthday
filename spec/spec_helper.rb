@@ -4,8 +4,6 @@ require "dotenv"
 
 Dotenv.load(".env.test")
 
-require "rewards-birthday"
-
 module Helpers
   def fixture(name)
     JSON.parse(File.read("spec/fixtures/#{name}.json"))
