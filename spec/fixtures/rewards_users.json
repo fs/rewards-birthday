@@ -7,7 +7,7 @@
         "email":"john.doe@example.com",
         "full-name":"John Doe",
         "username":"john.doe",
-        "birth_date": "2000-05-05"
+        "birth-date": "2000-05-05"
       }
   },
   {
@@ -18,7 +18,7 @@
         "email":"john.smith@example.com",
         "full-name":"John Smith",
         "username":"john.smith",
-        "birth_date": "1991-01-01"
+        "birth-date": "1991-01-01"
       }
   }]
 }

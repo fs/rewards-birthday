@@ -7,7 +7,7 @@
         "email":"john.smith@example.com",
         "full-name":"John Smith",
         "username":"john.smith",
-        "birth_date": "1991-01-01"
+        "birth-date": "1991-01-01"
       }
   }
 ]
