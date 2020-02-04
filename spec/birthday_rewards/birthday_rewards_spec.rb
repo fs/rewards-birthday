@@ -5,8 +5,8 @@ describe BirthdayRewards::Base do
 
   before do
     allow(Rewards::Client).to receive(:new) { rewards_client }
-    allow(rewards_client).to receive(:bot_users) { { "data" => fixture("users") } }
-    allow(rewards_client).to receive(:bot_create_token).and_return("data" => { "attributes" => { "token" => "123" } })
+    allow(rewards_client).to receive(:bot_users) { fixture("rewards_users") }
+    allow(rewards_client).to receive(:bot_create_token) { fixture("rewards_token") }
     allow(rewards_client).to receive(:bot_create_bonus)
   end
 
