@@ -4,7 +4,7 @@ require "dotenv"
 
 Dotenv.load(".env.test")
 
-require "rewards-birthday"
+require "birthday_rewards"
 
 module Helpers
   def fixture(name)
