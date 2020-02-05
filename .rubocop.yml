@@ -13,10 +13,10 @@ Rails:
 RSpec/FilePath:
   Enabled: false
 
-RSpec/MultipleExpectations:
-  Max: 2
-
 Naming/FileName:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
   Enabled: false
 
 Style/Documentation:
