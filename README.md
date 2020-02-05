@@ -37,7 +37,7 @@ heroku config:set REWARDS_TEMPLATE="+1000 Happy Birthday @%{username}"
 ```
 # Give bonuses to certain people
 emails = %w[john.smith@example.com john.doe@example.com]
-RewardsBirthday::Base.new.create_birthday_bonuses_for(emails)
+RewardsBirthday.create_birthday_bonuses_for(emails)
 ```
 
 ## Quality tools
