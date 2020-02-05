@@ -1,10 +1,7 @@
 require "date"
-
 require "rewards"
 
-require "birthday_rewards/user"
-
-module BirthdayRewards
+module RewardsBirthday
   class Base
     DEFAULT_BASE_URL = "http://rewards.team/api/v1".freeze
 
@@ -12,16 +9,18 @@ module BirthdayRewards
       Rewards::Client.base_uri(base_uri)
     end
 
-    def create_birthday_bonus
+    def create_birthday_bonuses
       users = wrap_users(fetch_users)
       celebrants = birthday_celebrants(users)
       create_bonuses(celebrants)
+      log("Today's birthday celebrants are congratulated.")
     end
 
     def create_birthday_bonuses_for(emails)
       users = wrap_users(fetch_users)
       celebrants = white_list_celebrants(emails, users)
       create_bonuses(celebrants)
+      log("Users with emails #{emails} are congratulated.")
     end
 
     private
@@ -35,8 +34,7 @@ module BirthdayRewards
     end
 
     def birthday_celebrants(users)
-      today = Date.today
-      users.select { |user| user.birthday?(today) }
+      users.select(&:birthday?)
     end
 
     def white_list_celebrants(email_white_list, users)
@@ -45,7 +43,9 @@ module BirthdayRewards
 
     def create_bonuses(users)
       users.each do |user|
-        client.bot_create_bonus(bonus(user))
+        b = bonus(user)
+        client.bot_create_bonus(b)
+        log("Bonus '#{b}' was created.")
       end
     end
 
@@ -70,6 +70,10 @@ module BirthdayRewards
 
     def reward_template
       @reward_template ||= ENV.fetch("REWARDS_BIRTHDAY_TEMPLATE")
+    end
+
+    def log(message)
+      puts message
     end
   end
 end

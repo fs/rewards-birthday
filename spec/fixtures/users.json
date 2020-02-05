@@ -18,5 +18,34 @@
       "username": "john.smith",
       "birth-date": "1991-01-01"
     }
+  },
+  {
+    "id": "3",
+    "type": "users",
+    "attributes": {
+      "email": "no.birth.date@example.com",
+      "full-name": "Wasnot Born",
+      "username": "no.birth.date"
+    }
+  },
+  {
+    "id": "4",
+    "type": "users",
+    "attributes": {
+      "email": "null.birth.date@example.com",
+      "full-name": "Null Birth",
+      "username": "null.birth.date",
+      "birth-date": null
+    }
+  },
+  {
+    "id": "5",
+    "type": "users",
+    "attributes": {
+      "email": "empty.birth.date@example.com",
+      "full-name": "Empty Birth",
+      "username": "empty.birth.date",
+      "birth-date": ""
+    }
   }
 ]

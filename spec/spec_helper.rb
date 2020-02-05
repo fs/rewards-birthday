@@ -4,11 +4,15 @@ require "dotenv"
 
 Dotenv.load(".env.test")
 
-require "birthday_rewards"
+require "rewards-birthday"
 
 module Helpers
   def fixture(name)
     JSON.parse(File.read("spec/fixtures/#{name}.json"))
+  end
+
+  def fixture_by_id(name, id)
+    fixture(name).find { |hash| hash["id"].to_i == id }
   end
 end
 
