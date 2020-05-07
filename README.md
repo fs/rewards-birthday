@@ -13,7 +13,7 @@ heroku create rewards-birthday
 # Create Heroku Scheduler
 heroku addons:create scheduler:standard
 
-# Open Heroku Scheduler and create daily job with `bin/rake rewards:give_bonus`
+# Open Heroku Scheduler and create daily job with `bin/rake rewards:give_birthday_bonus`
 heroku addons:open scheduler
 
 # Create Rollbar addon to track exceptions
