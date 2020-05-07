@@ -8,7 +8,7 @@ require "rewards-birthday"
 namespace :rewards do
   desc "This task gives bonuses when someone has a birthday"
   task :give_birthday_bonus do
-    RewardsBirthday::Base.new.create_birthday_bonus
+    RewardsBirthday.create_birthday_bonuses
     Snitcher.snitch(ENV["SNITCH_DAILY"]) if ENV["SNITCH_DAILY"]
   end
 end
