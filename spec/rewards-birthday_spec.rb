@@ -6,21 +6,18 @@ describe RewardsBirthday do
     allow(rewards_client).to receive(:bot_users) { fixture("rewards_users") }
     allow(rewards_client).to receive(:bot_create_token) { fixture("rewards_token") }
     allow(rewards_client).to receive(:bot_create_bonus)
+    Timecop.freeze(Date.new(2020, 1, 1))
   end
 
   describe ".create_birthday_bonus" do
     it "creates bonuses for celebrants" do
-      Timecop.freeze("2020-01-01") do
-        described_class.create_birthday_bonuses
-        expect(rewards_client).to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.smith")
-      end
+      described_class.create_birthday_bonuses
+      expect(rewards_client).to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.smith")
     end
 
     it "skips not celebrants" do
-      Timecop.freeze("2020-01-01") do
-        described_class.create_birthday_bonuses
-        expect(rewards_client).not_to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.doe")
-      end
+      described_class.create_birthday_bonuses
+      expect(rewards_client).not_to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.doe")
     end
   end
 
