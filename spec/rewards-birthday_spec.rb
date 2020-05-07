@@ -10,27 +10,31 @@ describe RewardsBirthday do
   end
 
   describe ".create_birthday_bonus" do
+    subject(:create_bonus) { described_class.create_birthday_bonuses }
+
     it "creates bonuses for celebrants" do
-      described_class.create_birthday_bonuses
+      create_bonus
       expect(rewards_client).to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.smith")
     end
 
     it "skips not celebrants" do
-      described_class.create_birthday_bonuses
+      create_bonus
       expect(rewards_client).not_to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.doe")
     end
   end
 
   describe ".create_birthday_bonuses_for" do
-    celebrants_emails_list = ["john.doe@example.com"]
+    subject(:create_bonus) { described_class.create_birthday_bonuses_for(celebrants_emails_list) }
+
+    let(:celebrants_emails_list) { ["john.doe@example.com"] }
 
     it "creates bonuses for those who is in white list" do
-      described_class.create_birthday_bonuses_for(celebrants_emails_list)
+      create_bonus
       expect(rewards_client).to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.doe")
     end
 
     it "skips non-white-list people" do
-      described_class.create_birthday_bonuses_for(celebrants_emails_list)
+      create_bonus
       expect(rewards_client).not_to have_received(:bot_create_bonus).with("+100 Happy Birthday @john.smith")
     end
   end
