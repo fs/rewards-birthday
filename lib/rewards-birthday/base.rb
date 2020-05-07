@@ -3,7 +3,7 @@ require "rewards"
 
 module RewardsBirthday
   class Base
-    DEFAULT_BASE_URL = "http://rewards.team/api/v1".freeze
+    DEFAULT_BASE_URL = "https://app.rewards.team/api/v1".freeze
 
     def initialize
       Rewards::Client.base_uri(base_uri)
