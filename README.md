@@ -29,7 +29,7 @@ heroku config:set SNITCH_DAILY=
 heroku config:set REWARDS_BASE_URI=http://rewards.team/api/v1
 heroku config:set REWARDS_BOT_NAME=
 heroku config:set REWARDS_BOT_PASSWORD=
-heroku config:set REWARDS_TEMPLATE="+1000 Happy Birthday @%{username}"
+heroku config:set REWARDS_BIRTHDAY_TEMPLATE="+1000 Happy Birthday @%{username}"
 ```
 
 ## Usage
