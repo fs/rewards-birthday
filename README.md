@@ -6,7 +6,7 @@ Birthday determined from Rewards API.
 
 ## Install
 
-```
+```bash
 # Create Heroku app
 heroku create rewards-birthday
 
@@ -34,10 +34,15 @@ heroku config:set REWARDS_TEMPLATE="+1000 Happy Birthday @%{username}"
 
 ## Usage
 
-```
+```ruby
 # Give bonuses to certain people
 emails = %w[john.smith@example.com john.doe@example.com]
 RewardsBirthday.create_birthday_bonuses_for(emails)
+```
+
+Or from command line:
+```bash
+bin/rake 'rewards:give_birthday_bonuses_to[james@example.com john@example.com]'
 ```
 
 ## Quality tools
