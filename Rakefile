@@ -13,7 +13,7 @@ namespace :rewards do
   end
 
   desc "This task gives birthday bonuses for people by emails passed as args"
-  task :give_birthday_bonuses_to, [:white_list] do |t, args|
+  task :give_birthday_bonuses_to, [:white_list] do |_task, args|
     celebrants = args[:white_list].split
     RewardsBirthday.create_birthday_bonuses_for celebrants
     Snitcher.snitch(ENV["SNITCH_DAILY"]) if ENV["SNITCH_DAILY"]
